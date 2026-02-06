@@ -71,16 +71,28 @@ button{
 </div>
 
 <script>
-let yesBtn = document.getElementById("daBtn");
-let noBtn = document.getElementById("nuBtn");
-let img = document.getElementById("mainImg");
-let title = document.getElementById("title");
+let nuTexts = [
+    "Are you sure?",
+    "Really sure?",
+    "Think again...",
+    "Last chance...",
+    "Pleaseee 🥺",
+    "Don't do this 😭",
+    "Say YES ❤️"
+];
 
-let daSize = 1;
+let textIndex = 0;
 
 nuBtn.addEventListener("click", ()=>{
-    daSize += 0.6;
+
+    daSize += 0.7;
     daBtn.style.transform = "scale(" + daSize + ")";
+
+    if(textIndex < nuTexts.length){
+        nuBtn.innerText = nuTexts[textIndex];
+        textIndex++;
+    }
+});
 
 });
 
@@ -94,6 +106,7 @@ daBtn.addEventListener("click", ()=>{
 
 </body>
 </html>
+
 
 
 
