@@ -79,13 +79,9 @@ let title = document.getElementById("title");
 let daSize = 1;
 
 nuBtn.addEventListener("click", ()=>{
-    daSize += 0.2;
+    daSize += 0.6;
     daBtn.style.transform = "scale(" + daSize + ")";
 
-    let x = Math.random()*300 - 150;
-    let y = Math.random()*300 - 150;
-
-    nuBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
 daBtn.addEventListener("click", ()=>{
@@ -98,5 +94,6 @@ daBtn.addEventListener("click", ()=>{
 
 </body>
 </html>
+
 
 
